@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	padding: 15px; 
+	background: #fff;
+
+}
+
+p {
+	font-family: Verdana;
+	font-size: medium;
+}
+
+button {
+	margin-top: 15px;
+	margin-bottom: 15px; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    width: 300px;
+    height: 100px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+}
+
+#greenButton {
+	    background-color: #999; 
+	}
+
+#redButton {
+	    background-color: #aaa;
+	}
+
+#blueButton {
+	    background-color: #bbb 
+	}

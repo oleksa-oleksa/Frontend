@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Übungsaufgabe XHTML</title>
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <meta name="description" content="Das ist die erste Aufgabe für Somersemester 2017 Technische Informatik">
+    <meta name="author" content="Oleksandra Baga">
+
+    <!-- Custom styles -->
+    <style>
+
+    h1 {
+
+        font-family: Serif;
+        font-weight: bold;
+        color: black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-family: Serif;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    ul.circleStyle {
+        list-style-type: circle;
+        
+    }
+
+    ol {
+        font-family: Serif;
+        font-size: 14px;
+    }
+
+    li {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    img.logo {
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    hr {
+        border-color: #bbbbbb;
+        
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Übungsaufgabe XHTML</h2>
+
+    <p>Bitte bauen Sie diese Webseite ausschließlich in validem XHTML <b> genau eins zu eins</b> nach, also auch die Texte. Als Browser wurde Firefox benutzt.</p>
+
+    <table style="width:100%">
+    <tr>
+        <td valign="top" style="width:50%">
+            <h3>Vorgehensweise</h3>
+            <p>
+                <ol>
+                <li>Erstellen Sie ein valides HTML-Grundgerüst (XHTML trans)</li>
+                <li>Erzeugen Sie die einzelenen HTML-Elemente</li>
+                
+                <ul class="circleStyle">
+                    <li>Überschriften, z.B. &lth1&gt, &lth2&gt, &lth3&gt</li>
+                    <li>Absätze</li>
+                    <li>Sortierte und Unsortierte Listen</li>
+                    <li>usw.</li>
+                </ul> 
+                
+                <li>Wurden auch Formatierungen mit HTML erzeugt? Was ist darüber zu sagen?</li>
+                <li>Alle Tags, die Sie benötigen, finden Sie in der HTML-Referenz in Moodle</li>
+                </ol>
+            </p>
+        </td>
+
+        <td valign="top" style="width:50%">
+        <h3>Platzierung von Elementen nebeneinanderer</h3>
+        <p>Wie habe ich das gemacht? Diese Methode zwar nicht mehr zeitgemäß, man sollte sie aber kennen.<br>
+        <i>Das Bild finden Sie auf der Startseite der Beuth Hochschule.</i></p>
+
+        <a href="http://http://www.beuth-hochschule.de/" target="_blank">
+        <img src="http://www.beuth-hochschule.de/fileadmin/_processed_/csm_Beuth_Logo_horizontal_4b3937ad35.png" title="Beim Klicken öffnet sich <br>die Webseite der Beuth Hochschule in einem neuen Fenster. Diese Nachricht erscheint, wenn ich mit dem Mauszeiger über den Link fahre."></a>
+        </td>
+    </tr>
+    </table>
+
+    <hr>
+
+<!-- Contact Area -->
+
+    <h3>Kontaktformular</h3>
+
+    <table style="width: 80%">
+    <tr>
+        <td valign="top" style="border: 1px solid black; width: 15% margin-left: 5px;">
+            <p style="margin-left: 5px;">
+                Vorname:
+            </p>
+        </td>
+        <td valign="top" style="border: 1px solid black; width: 27% margin-left: 5px;">
+            <input type="text" placeholder="Vorname" required width="75px" style="margin-top: 12px; margin-left: 5px;">
+        </td>
+        <td valign="top" style="border: 1px solid black; width: 15% margin-left: 5px;">
+            <p style="margin-left: 5px;">
+                Nachname:
+            </p>
+        </td>
+        <td valign="top" style="border: 1px solid black; width: 28%">
+            <input type="text" placeholder="Nachname" required width="75px" style="margin-top: 12px; margin-left: 5px;">
+        </td>
+        <td rowspan="3" valign="bottom" align="center" style="border: 1px solid black; width: 15%; margin-bottom: 10px margin-left: 5px;">
+            <button type="submit" width="50px;">Abschicken</button>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="border: 1px solid black; width: 15%">
+            <p style="margin-left: 5px;">
+                E-Mail Adresse:
+            </p>
+        </td>
+        <td valign="top" style="border: 1px solid black; width: 27%">
+            <input type="text" placeholder="E-Mail" required width="75px" style="margin-top: 12px; margin-left: 5px;">
+        </td>
+        <td valign="top" style="border: 1px solid black; width: 15%">
+            <p style="margin-left: 5px;">
+                Telefon:
+            </p>
+        </td>
+        <td valign="top" style="border: 1px solid black; width: 28%">
+            <input type="text" placeholder="Telefon" required width="75px" style="margin-top: 12px; margin-left: 5px;">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="border: 1px solid black; width: 15%">
+            <p style="margin-left: 5px;">
+                Ihre Nachricht:
+            </p>
+        </td>
+        <td colspan="3" valign="top" style="border: 1px solid black; width: 27%">
+            <input type="text" placeholder="Nachricht" required style="width: 90%; height: 80px; margin-top: 12px; margin-bottom: 10px; margin-left: 5px;"">
+        </td>
+        
+    </tr>
+
+
+    </table>
+
+</body>
+
+
+</html>
