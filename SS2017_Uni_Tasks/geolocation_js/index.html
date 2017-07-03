@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="description" content="Das ist die letzte Aufgabe für Somersemester 2017 Technische Informatik">
+    <meta name="author" content="Oleksandra Baga">
+    <script src="location.js"></script>
+    <link rel="stylesheet" href="location.css">
+
+  </head>
+<body>
+
+<div id="welcome">Wie weit bin ich von der Beuth Hochschüle für Technik Berlin?
+</div>
+
+<div id="standort">Meine Position: Breitengrad, Längengrad. <br>
+    <span id="standortContent"></span><br>
+    Genauigkeit:
+    <span id="standortAccuracy"></span>
+</div> 
+
+<div id="entfernung">Entfernung zur Beuth Hochschule<br>
+  <span id="entfernungContent"></span>
+</div> 
+
+<div id="mapText">Anzeige Google-Maps Karte</div>
+
+<div id="map"></div>
+      
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLUZF0yGXsVUPPFVziHpbqkBL_2dOXgOk&callback=initMap&libraries=geometry">
+    </script>
+
+</body>
+</html>

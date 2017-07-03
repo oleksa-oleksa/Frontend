@@ -1,0 +1,56 @@
+ /* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+ #map {
+	height: 400px;
+    width: 100%;
+    justify-content: center;
+ }
+      
+#mapText {
+	font-family: Verdana;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: green;
+}
+
+#standort {
+	font-family: Verdana;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: blue;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#entfernung {
+	font-family: Verdana;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	background-color: green;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+#welcome {
+	font-family: Verdana;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	background-color: #ADD8E6;
+	color: black;
+	margin-bottom: 10px;
+	height: 30px;
+
+}
+
+ /* Optional: Makes the sample page fill the window. */
+ html, body {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+ }
