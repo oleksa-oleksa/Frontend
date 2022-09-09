@@ -46,7 +46,7 @@ function Navbar() {
 // you can do inside the ReactDOM.render call below)
 
 function MainContent() {
-    return (<h1>I'm learning React!"</h1>)
+    return (<h1>I'm learning React!</h1>)
 }
 
 ReactDOM.render(
@@ -72,7 +72,7 @@ appending an h1 to our div#root (without using innerHTML).
 const h1 = document.createElement("h1")
 h1.textContent = "This is an imperative way to program"
 h1.className = "header"
-document.getElementById("root-swp").append(h1)
+//document.getElementById("root-swp").append(h1)
 
 
 // JSX
@@ -82,7 +82,19 @@ const page = (
         <p>This is a paragraph</p>
     </div>
 )
+
+const navbar = (
+    <nav>
+        <h1>Oleksadra Website</h1>
+        <ul> I can do:
+            <li>Machine Learnin</li>
+            <li>Embedded Systems</li>
+            <li>Frontend</li>
+        </ul>
+    </nav>
+)
+
 ReactDOM.render(
-    page,
-    document.getElementById("root-swp2")
+    navbar,
+    document.getElementById("my-nav")
 )
