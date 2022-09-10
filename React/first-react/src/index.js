@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
-const page = (
+function CreateContent() {
     <div>
         <nav>
             <h1>Oleksandra</h1>
@@ -20,9 +20,8 @@ const page = (
             <li>It's actively maintained by skilled people</li>
         </ol>
     </div>
-)
+}
 
-
-console.log(page)
+console.log(<CreateContent />)
 // ReactDOM.render(navbar, document.getElementById("root"))
-ReactDOM.createRoot(document.getElementById("root")).render(page)
+ReactDOM.createRoot(document.getElementById("root")).render(<CreateContent />)
