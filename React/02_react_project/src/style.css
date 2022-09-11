@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #21222A;
+    height: 90px;
+    padding-top: 30px; 
+    padding-right: 25px;
+}
+
+react-logo {
+    width: 80px;
+    align-items: center;
+    display: flex;
+}
