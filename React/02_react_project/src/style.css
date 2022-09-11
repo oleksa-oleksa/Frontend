@@ -1,5 +1,8 @@
 body {
     margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #282D35;
+
 }
 
 nav {
@@ -11,8 +14,67 @@ nav {
     padding-right: 25px;
 }
 
-react-logo {
-    width: 80px;
+nav > img {
+    width: 30px;
     align-items: center;
     display: flex;
+    margin-right: 10px;
+    margin-left: 25px;
+}
+
+.nav--logo_text, .nav--title {
+    margin: 0;
+}
+
+.nav--logo_text {
+    margin-right: auto;
+    color: #61DAFB;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.nav--title {
+    margin-right: 30px;
+    color: #DEEBF8;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+main {
+    color: #ffffff;
+    margin-left: 25px;
+    background-image: url(/src/assets/logo_dark.png);
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-position: right 25%;
+    background-size: contain;
+}
+
+.main--title {
+    margin-top: 60px;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: -0.05em;
+    text-align: left;
+}
+
+.main--facts {
+    margin-top: 46px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.main--facts > li {
+    line-height: 39px;
+    padding-block: 10px;
+
+}
+
+.main--facts > li::marker {
+    font-size: 1.4rem;
+    color: #61DAFB;
 }
