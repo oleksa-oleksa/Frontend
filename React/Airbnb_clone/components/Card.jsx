@@ -6,6 +6,8 @@ export default function Card(props) {
         badgeText = "SOLD OUT"
     } else if (props.location === "Online") {
         badgeText = "ONLINE"
+    } else if (props.openSpots < 3) {
+        badgeText = "LAST CHANCE"
     }
     return (
         <section className="card">

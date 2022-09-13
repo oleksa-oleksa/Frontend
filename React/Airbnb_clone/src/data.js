@@ -36,6 +36,20 @@ export default [
             reviewCount: 2
         },
         location: "Norway",
-        openSpots: 3,
+        openSpots: 9,
+    },
+
+    {
+        id: 4,
+        title: "Plan a Venice venture with Giulia",
+        description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+        price: 50,
+        coverImg: "venice.webp",
+        stats: {
+            rating: 4.2,
+            reviewCount: 18
+        },
+        location: "Italy",
+        openSpots: 1,
     }
 ]
