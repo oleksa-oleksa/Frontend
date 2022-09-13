@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         title: "Alpen mit der Seilbahn",
-        img: "pic001.jpg",
+        img: "pic001.png",
         location: "Österreich",
         googleMapsUrl: "https://goo.gl/maps/7KNMQ7GNAeNbKvb27",
         tag: "Bergen mit den Kindern",
@@ -10,21 +10,20 @@ export default [
     },
     {
         id: 2,
-        title: "Schwimmbad",
-        img: "pic002.jpg",
-        location: "Österreich",
-        googleMapsUrl: "https://goo.gl/maps/RaoaELU2yBgUq8t69",
-        tag: "Wassersport",
-        description: "Stadtbad Schöneberg wurde als Zweckbau errichtet und 1930 eröffnet und ist ideal für Familien mit Kindern. Das Bad steht unter Denkmalschutz.",
+        title: "Altstatd mit dem Fuß",
+        img: "pic004.jpg",
+        location: "Spandau",
+        googleMapsUrl: "https://goo.gl/maps/aRtQrFhBjJa7xwEx7",
+        tag: "Stadt",
+        description: "Der weitläufige Bezirk Spandau ist für seine Parks und Wasserstraßen sowie die reizvolle Altstadt Spandau mit Fachwerkhäusern und lebhaften Cafés bekannt.",
     },
     {
         id: 3,
         title: "Doppeldeckerbus",
         img: "pic0031.jpg",
-        location: "Österreich",
+        location: "Steglitz",
         googleMapsUrl: "https://goo.gl/maps/7KNMQ7GNAeNbKvb27",
         tag: "Stadt",
         description: "Kinder entdecken kostenlos aus einer ganz anderen Perspektive und erfahren nebenbei Wissenswertes über die Stadt an der Leine. ",
     }
-
 ]

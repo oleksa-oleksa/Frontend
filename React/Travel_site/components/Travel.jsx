@@ -18,7 +18,7 @@ export default function Travel(props) {
                     </span>  
                 </div>
                 <div className="travel--title">{props.title}</div>
-                <div className="travel--tag">#{props.tag}</div>
+                <div className="travel--tag">{props.tag}</div>
                 <div className="travel--description">{props.description}</div>
             </span>
         </section>
