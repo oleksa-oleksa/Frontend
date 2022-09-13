@@ -31,7 +31,7 @@ section {
 .hero--photo {
     max-width: 400px;
     align-self: center;
-    margin-bottom: 85px;
+    margin-bottom: 25px;
 }
 
 .hero--header {
@@ -40,4 +40,45 @@ section {
 
 .hero--text {
     margin-top: 0px;
+}
+
+.card {
+    width: 175px;
+    font-size: 12px;
+    position: relative
+}
+
+.card--photo {
+    width: 100%;
+    border-radius: 9px;
+    margin-bottom: 9px;
+}
+
+.card--star {
+    height: 14px;
+}
+
+.card--country {
+    color: #918E9B;
+}
+
+.card--price {
+    font-weight: bold;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.card--badge {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
