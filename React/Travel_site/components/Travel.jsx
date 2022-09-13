@@ -13,8 +13,13 @@ export default function Travel(props) {
                         <img className="travel--header--geo" src="../src/assets/geo.png" alt="geo icon"/>
                     </span>
                     <span className="travel--header--location">{props.location}</span>
-                    <span className="travel--header--gmaps"><a href={`${props.googleMapsUrl}`}>View on Google Maps</a></span>  
+                    <span className="travel--header--gmaps">
+                        <a href={`${props.googleMapsUrl}`}>View on Google Maps</a>
+                    </span>  
                 </div>
+                <div className="travel--title">{props.title}</div>
+                <div className="travel--tag">#{props.tag}</div>
+                <div className="travel--description">{props.description}</div>
             </span>
         </section>
     )
