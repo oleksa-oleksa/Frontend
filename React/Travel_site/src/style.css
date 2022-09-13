@@ -8,77 +8,85 @@ body {
 }
 
 nav {
-    height: 70px;
+    height: 75px;
     display: flex;
-    padding: 20px 36px;
-    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    background: #F55A5A;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 42px;
 }
 
-.nav--logo {
-    margin-left: 25px;
-    max-width: 100px;
+.nav--text {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+
+
 }
 
-section {
-    padding: 20px;
+.travel {
+    position: relative;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-left: 50px;
 }
 
-.hero {
+.travel--photo {
+    position: absolute;
+    width: 125px;
+    height: 168px;
+    background: url(.jpg);
+    border-radius: 5px;
+}
+
+.travel--header--geo {
+    position: absolute;
+    width: 10px;
     display: flex;
-    flex-direction: column;
+    left: 150px;
+    top: 20px;
 }
 
-.hero--photo {
-    max-width: 400px;
-    align-self: center;
-    margin-bottom: 25px;
+.travel--header--location {
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    padding-left: 10px;
+    top: 20px;
+    left: 154px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 12px;
+    letter-spacing: 0.17em;
+
+    color: #2B283A;
 }
 
-.hero--header {
-    margin-bottom: 16px;
-}
+.travel--header--gmaps {
+    /* View on Google Maps */
+    position: absolute;
+    width: 106px;
+    height: 13px;
+    left: 300px;
+    top: 20px;
 
-.hero--text {
-    margin-top: 0px;
-}
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 12px;
+    /* identical to box height */
 
-.card {
-    width: 175px;
-    font-size: 12px;
-    position: relative
-}
+    text-decoration-line: underline;
 
-.card--photo {
-    width: 100%;
-    border-radius: 9px;
-    margin-bottom: 9px;
-}
-
-.card--star {
-    height: 14px;
-}
-
-.card--country {
     color: #918E9B;
 }
 
-.card--price {
-    font-weight: bold;
-}
-
-.cards-list {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
-    overflow-x: auto;
-}
-
-.card--badge {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    background-color: white;
-    padding: 5px 7px;
-    border-radius: 2px;
-    font-weight: bold;
-}
+.travel--header--gmaps > a:visited {
+    text-decoration-line: underline;
+    color: #918E9B;
+  }

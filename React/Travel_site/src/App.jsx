@@ -1,16 +1,14 @@
 import Navbar from '../components/Navbar'
-import Main from '../components/Main'
-import Hero from '../components/Hero'
-import Card from '../components/Card'
+import Travel from '../components/Travel'
 import data from './data'
 
 function App() {
 
-  const cardData = data.map(card => {
+  const travelData = data.map(travel => {
     return (
-      <Card 
-      key={card.id}
-      {...card}
+      <Travel 
+      key={travel.id}
+      {...travel}
       />
     )
   })
@@ -18,9 +16,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Hero />
-      <section className="cards-list">
-        {cardData}
+      <section className="travel-list">
+        {travelData}
       </section>
     </div>
   )
