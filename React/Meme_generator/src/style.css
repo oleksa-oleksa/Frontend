@@ -7,6 +7,10 @@ body {
     margin: 0;
 }
 
+main {
+    padding: 36px;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -22,7 +26,7 @@ body {
 }
 
 .header--title {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-right: auto;
 }
 
@@ -37,6 +41,19 @@ body {
     gap: 17px;
 }
 
+.form--input {
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+
 .form--button {
     grid-column: 1 / -1;
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
 }
