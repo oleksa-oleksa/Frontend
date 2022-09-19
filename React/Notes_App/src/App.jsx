@@ -18,7 +18,10 @@ export default function App() {
      * with the notes saved in localStorage. You'll need to
      * use JSON.parse() to turn the stringified array back
      * into a real JS array.*/
-    const [notes, setNotes] = React.useState(() => JSON.parse(localStorage.getItem("notes")) ||[])
+
+    const [notes, setNotes] = React.useState(
+        () => JSON.parse(localStorage.getItem("notes")) || []
+    )
     const [currentNoteId, setCurrentNoteId] = React.useState(
         (notes[0] && notes[0].id) || ""
     )
@@ -27,9 +30,9 @@ export default function App() {
      * in localStorage. You'll need to use JSON.stringify()
      * to turn the array into a string to save in localStorage.*/   
     React.useEffect(() => {
-        localStorage.setItem("notes" ,JSON.stringify(notes))
+        localStorage.setItem("notes", JSON.stringify(notes))
     }, [notes])
-
+    
     function createNewNote() {
         const newNote = {
             id: nanoid(),
@@ -39,12 +42,29 @@ export default function App() {
         setCurrentNoteId(newNote.id)
     }
     
+    
     function updateNote(text) {
-        setNotes(oldNotes => oldNotes.map(oldNote => {
-            return oldNote.id === currentNoteId
-                ? { ...oldNote, body: text }
-                : oldNote
-        }))
+        // Put the most recently-modified
+        // note to be at the top
+        setNotes(oldNotes => {
+            const newArray = []
+            for(i = 0; i < oldNotes.length; i++) {
+            // Loop over the original array
+                // if the id matches
+                if(oldNotes[i].id === currentNoteId) {
+                    // put the updated note at the 
+                    // beginning of the new array
+                    newArray.unshift({ ...oldNotes[i], body: text }) }
+                else {
+                    // push the old note to the end
+                    // of the new array
+                    newArray.push(oldNotes[i])
+                }
+                
+            }
+            // return the new array
+            return newArray
+        })
     }
     
     function findCurrentNote() {
@@ -68,6 +88,7 @@ export default function App() {
                     currentNote={findCurrentNote()}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
+                    deleteNote={deleteNote}
                 />
                 {
                     currentNoteId && 
