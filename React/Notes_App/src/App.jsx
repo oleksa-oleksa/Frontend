@@ -66,6 +66,13 @@ export default function App() {
             return newArray
         })
     }
+    /* Challenge: complete and implement the deleteNote function */
+    function deleteNote(event, noteId) {
+        /* What array method can be used to return a new
+        *  array that has filtered out an item based 
+        *  on a condition? */
+        setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId ))
+    }
     
     function findCurrentNote() {
         return notes.find(note => {
