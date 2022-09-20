@@ -11,7 +11,12 @@ export default function Cube(props) {
 
     return (
         <section className="cube">
-            <div className="cube--element" style={styles}>
+            <div 
+            className="cube--element" 
+            style={styles}
+            onClick={props.holdCube}
+            
+            >
                 <h2>{props.value}
                 </h2>
             </div>

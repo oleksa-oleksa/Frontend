@@ -21,7 +21,8 @@ function App() {
           newCubes.push({
             value: Math.ceil(Math.random() * 6), 
             isHeld: false,
-            id: i})
+            id: i
+          })
         }
         return newCubes
   }
@@ -29,7 +30,24 @@ function App() {
   /* Map over the state numbers array to generate our array
   * of Die elements and render those in place of our
   * manually-written 10 Die elements */
-  const cubeElements = randomNumbers.map(cube => <Cube value={cube.value} isHeld={cube.isHeld} id={cube.id}/>)
+  const cubeElements = randomNumbers.map(cube => <Cube key={cube.id} value={cube.value} isHeld={cube.isHeld} holdCube={() => holdCube(cube.id)}/>)
+  
+  /* Challenge: Create a function `holdDice` that takes
+  * `id` as a parameter. */
+
+  function holdCube(id) {
+    // console.log(id)
+    /* Challenge: Update the `holdDice` function to flip
+    * the `isHeld` property on the object in the array
+    * that was clicked, based on the `id` prop passed
+    * into the function. */
+    setRandomNumbers(prevRandNum => prevRandNum.map(num => {
+      return num.id === id ? {...num, isHeld: !num.isHeld} : num
+    }))
+      
+   
+  }
+
   return (
     <div className="App">
       <main>
