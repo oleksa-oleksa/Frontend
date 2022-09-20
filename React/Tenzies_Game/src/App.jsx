@@ -9,20 +9,27 @@ function App() {
   * loads all new dice as soon as the app loads) */
   const [randomNumbers, setRandomNumbers] = useState(allNewCubes)
 
+  
+  // DRY 
+  function generateRandomCube(i) {
+    return {
+      value: Math.ceil(Math.random() * 6), 
+      isHeld: false,
+      id: i
+    }
+  }
+  
   /* Write a function (allNewDice) that returns an array 
   * of 10 random numbers between 1-6 inclusive. */ 
-
   function allNewCubes() {
     const newCubes = []
         for (let i = 0; i < 10; i++) {
           /* Challenge: Update the array of numbers in state to be
           * an array of objects instead. Each object should look like:
           * { value: <random number>, isHeld: false } */
-          newCubes.push({
-            value: Math.ceil(Math.random() * 6), 
-            isHeld: false,
-            id: i
-          })
+          newCubes.push(
+            generateRandomCube(i)
+          )
         }
         return newCubes
   }
@@ -32,11 +39,18 @@ function App() {
   * manually-written 10 Die elements */
   const cubeElements = randomNumbers.map(cube => <Cube key={cube.id} value={cube.value} isHeld={cube.isHeld} holdCube={() => holdCube(cube.id)}/>)
   
-  /* Challenge: Create a function `holdDice` that takes
-  * `id` as a parameter. */
+
+  function rollCube() {
+  /* Challenge: Update the `rollDice` function to not just roll
+  * all new dice, but instead to look through the existing dice
+  * to NOT role any that are being `held`.*/
+    setRandomNumbers(prevRandNum => prevRandNum.map(num => {
+      return num.isHeld ?  num : generateRandomCube(num.id)
+    }))
+  }
+
 
   function holdCube(id) {
-    // console.log(id)
     /* Challenge: Update the `holdDice` function to flip
     * the `isHeld` property on the object in the array
     * that was clicked, based on the `id` prop passed
@@ -54,7 +68,7 @@ function App() {
       <div className="cube-container">
         {cubeElements}
       </div>
-      <button type="button" className="button--roll">Roll</button>
+      <button type="button" className="button--roll" onClick={rollCube}>Roll</button>
       </main>
       
     </div>
