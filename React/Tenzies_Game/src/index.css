@@ -49,3 +49,17 @@ main {
   row-gap: 15px;
   
 }
+
+.button--roll {
+  margin-top: 30px;
+  height: 35px;
+  width: 90px;
+  border-radius: 4px;
+  background: #5035FF;
+  font-family: Karla;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;  
+  color: #FFFFFF;
+
+}

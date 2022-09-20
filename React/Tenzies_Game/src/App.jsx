@@ -31,7 +31,7 @@ function App() {
       <div className="cube-container">
         {cubeElements}
       </div>
-       
+      <button type="button" className="button--roll">Roll</button>
       </main>
       
     </div>
