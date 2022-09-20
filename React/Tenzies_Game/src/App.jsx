@@ -9,7 +9,26 @@ function App() {
   * loads all new dice as soon as the app loads) */
   const [randomNumbers, setRandomNumbers] = useState(allNewCubes)
 
+  /* Add new state called `tenzies`, default to false. It
+  *  represents whether the user has won the game yet or not. */
+  const [tenzies, setTenzies] = useState(false)
   
+  /* Add an effect that runs every time the `dice` state array 
+  *  changes. For now, just console.log("Dice state changed"). */
+  useEffect(() => {
+    /* Challenge: Check the dice array for these winning conditions:
+    * 1. All dice are held, and */
+    const allHeld = randomNumbers.every(num => num.isHeld)
+
+    /* 2. all dice have the same value */
+    const firstValue = randomNumbers[0].value
+    const allSameValues = randomNumbers.every(num => num.value === firstValue)
+
+    if (allHeld && allSameValues) {
+      setTenzies(true)
+    }
+  }, randomNumbers)
+
   // DRY 
   function generateRandomCube(i) {
     return {
@@ -44,9 +63,14 @@ function App() {
   /* Challenge: Update the `rollDice` function to not just roll
   * all new dice, but instead to look through the existing dice
   * to NOT role any that are being `held`.*/
-    setRandomNumbers(prevRandNum => prevRandNum.map(num => {
-      return num.isHeld ?  num : generateRandomCube(num.id)
+    if (tenzies) {
+      setRandomNumbers(allNewCubes)
+      setTenzies(false)
+    } else {
+        setRandomNumbers(prevRandNum => prevRandNum.map(num => {
+          return num.isHeld ?  num : generateRandomCube(num.id)
     }))
+    }
   }
 
 
@@ -65,10 +89,14 @@ function App() {
   return (
     <div className="App">
       <main>
+      <div className="title">Tenzies</div>
+            <p className="instructions">Roll until all cubes are the same. 
+            Click each cube to freeze it at its current value between rolls.
+            </p>
       <div className="cube-container">
         {cubeElements}
       </div>
-      <button type="button" className="button--roll" onClick={rollCube}>Roll</button>
+      <button type="button" className="button--roll" onClick={rollCube}>{tenzies? "New game" : "Roll"}</button>
       </main>
       
     </div>

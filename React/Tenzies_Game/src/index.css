@@ -20,8 +20,9 @@ main {
   background: #F5F5F5;
   border-radius: 10px;
   width: fit-content;
+  height: fit-content;
   max-width: 800px;
-  height: 320px;
+  height: 450px;
   display: flex;
   padding: 20px;
   display: flex;
@@ -47,13 +48,14 @@ main {
   grid-template: auto auto / repeat(5, 1fr); 
   column-gap: 10px;
   row-gap: 15px;
+  margin-bottom: 10px;
   
 }
 
 .button--roll {
   margin-top: 30px;
   height: 35px;
-  width: 90px;
+  width: 130px;
   border-radius: 4px;
   background: #5035FF;
   font-family: Karla;
@@ -63,3 +65,19 @@ main {
   color: #FFFFFF;
 
 }
+
+.title {
+  font-size: 40px;
+  margin: 0;
+}
+
+.instructions {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
