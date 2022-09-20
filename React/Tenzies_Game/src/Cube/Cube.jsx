@@ -5,7 +5,7 @@ export default function Cube(props) {
     return (
         <section className="cube">
             <div className="cube--element">
-                <h2>{props.number}
+                <h2>{props.value}
                 </h2>
             </div>
         </section>
