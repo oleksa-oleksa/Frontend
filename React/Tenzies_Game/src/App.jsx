@@ -4,11 +4,10 @@ import './App.css'
 import Cube from './Cube/Cube'
 
 function App() {
-
   /* Create state to hold our array of numbers. (Initialize
   * the state by calling our `allNewDice` function so it 
   * loads all new dice as soon as the app loads) */
- const [randomNumbers, setRandomNumbers] = useState(allNewCubes)
+  const [randomNumbers, setRandomNumbers] = useState(allNewCubes)
 
   /* Write a function (allNewDice) that returns an array 
   * of 10 random numbers between 1-6 inclusive. */ 
@@ -16,7 +15,13 @@ function App() {
   function allNewCubes() {
     const newCubes = []
         for (let i = 0; i < 10; i++) {
-          newCubes.push(Math.ceil(Math.random() * 6))
+          /* Challenge: Update the array of numbers in state to be
+          * an array of objects instead. Each object should look like:
+          * { value: <random number>, isHeld: false } */
+          newCubes.push({
+            value: Math.ceil(Math.random() * 6), 
+            isHeld: false,
+            id: i})
         }
         return newCubes
   }
@@ -24,7 +29,7 @@ function App() {
   /* Map over the state numbers array to generate our array
   * of Die elements and render those in place of our
   * manually-written 10 Die elements */
-  const cubeElements = randomNumbers.map(die => <Cube value={die} />)
+  const cubeElements = randomNumbers.map(cube => <Cube value={cube.value} isHeld={cube.isHeld} id={cube.id}/>)
   return (
     <div className="App">
       <main>
