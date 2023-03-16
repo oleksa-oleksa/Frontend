@@ -3,19 +3,19 @@
 <div class="container">
   <div class="todo-list">
     <div class="input-group">
-      <input type="text" placeholder="Todo">
-      <button class="add-button">+</button>
+      <input type="text" placeholder="Todo" #newTask>
+      <button (click)="add(newTask.value)" class="add-button">+</button>
     </div>
     <table>
       <tr *ngFor="let task of tasks" class="even">
         <td>
           <pre>
-            {{task}}
+            {{task.title}}
           </pre>
         </td>
         <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
+          <button (click)="remove(task)" class="remove-button">X</button>
+          <button (click)="markAsDone(task)" class="done-button">Done</button>
         </td>
       </tr>
     </table>
