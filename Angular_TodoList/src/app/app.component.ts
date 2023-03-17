@@ -26,11 +26,6 @@ export class AppComponent {
       this.tasks = this.tasks.filter(task => task != existingTask);
     }
   }
-
-  markAsDone(task: Task) {
-    //alert(`The task: "`+ task + '"is done')
-    task.isDone = true;
-  }
 }
 
 
@@ -39,4 +34,9 @@ class Task {
 
   }
   public isDone = false;
+
+  toggleIsDone() {
+    //alert(`The task: "`+ task + '"is done')
+    this.isDone = !this.isDone;
+  }
 }
