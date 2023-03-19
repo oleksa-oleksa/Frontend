@@ -2,8 +2,8 @@ import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Route } from '@angular/router';
-import { NewTask } from './NewTask';
-import { Task } from './Task';
+import { NewTask } from './new-task.dto';
+import { TaskItem } from './task-irem.dto';
 
 @Component({
   selector: 'app-task-list',
@@ -23,11 +23,11 @@ export class TaskListComponent implements OnInit{
     this.newTask = new NewTask(this.newTask.title, new Date(strDate))
   }
 
-  tasks: Task[] = [
-    new Task("Call Katja"),
-    new Task("Go to the Superfit Gym"),
-    new Task("Visit those awesome playground with a child afterworks"),
-    new Task("Try a new pizza from a small restaurant")
+  tasks: TaskItem[] = [
+    new TaskItem("Call Katja"),
+    new TaskItem("Go to the Superfit Gym"),
+    new TaskItem("Visit those awesome playground with a child afterworks"),
+    new TaskItem("Try a new pizza from a small restaurant")
   ]
 
   add(taskNgForm: NgForm){
@@ -41,12 +41,12 @@ export class TaskListComponent implements OnInit{
       return;
     }
     
-    this.tasks.push(new Task(this.newTask.title));
+    this.tasks.push(new TaskItem(this.newTask.title));
     //this.newTaskTitle = "";
     taskNgForm.reset({date: this.newTask.date})
   }
 
-  remove(existingTask: Task) {
+  remove(existingTask: TaskItem) {
     var userConfirmed = confirm(`Are you sure you want to remove: \n ${existingTask.title}`)
 
     if (userConfirmed) {
