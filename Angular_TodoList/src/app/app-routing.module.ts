@@ -4,8 +4,8 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { TaskListComponent } from './task-list/task-list.component';
 
 const routes: Routes = [
-  {component: CalendarComponent, path: ''},
-  {component: TaskListComponent, path: '/tasks'}
+  { path: '', component: CalendarComponent },
+  { path: 'tasks', component: TaskListComponent }
 ];
 
 @NgModule({

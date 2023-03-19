@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskListModule } from './task-list/task-list.module';
 import { CalendarModule } from './calendar/calendar.module';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -16,6 +18,7 @@ import { CalendarModule } from './calendar/calendar.module';
     AppRoutingModule,
     TaskListModule,
     CalendarModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
