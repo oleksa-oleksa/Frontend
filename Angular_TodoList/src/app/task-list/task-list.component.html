@@ -2,6 +2,13 @@
     App Component
   <div class="container">
     <div class="todo-list">
+
+      <div class="input-group">
+        <input [matDatepicker]="picker" [(ngModel)]="date" type="text">
+        <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+
       <div class="input-group">
         <input type="text" placeholder="Todo" #newTask>
         <button (click)="add(newTask.value)" class="add-button">+</button>
