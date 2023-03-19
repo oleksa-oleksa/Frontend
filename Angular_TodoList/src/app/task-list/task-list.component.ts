@@ -10,6 +10,7 @@ export class TaskListComponent implements OnInit{
 
   constructor(private route: ActivatedRoute) {}
 
+  newTaskTitle: string = "";
   date: Date = new Date()
 
   ngOnInit(): void {
@@ -23,9 +24,10 @@ export class TaskListComponent implements OnInit{
     new Task("Try a new pizza from a small restaurant")
   ]
 
-  add(newTask: string){
+  add(){
     //alert(newTask)
-    this.tasks.push(new Task(newTask))
+    this.tasks.push(new Task(this.newTaskTitle));
+    this.newTaskTitle = "";
   }
 
   remove(existingTask: Task) {

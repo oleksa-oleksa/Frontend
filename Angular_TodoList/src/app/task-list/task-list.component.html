@@ -2,17 +2,19 @@
     App Component
   <div class="container">
     <div class="todo-list">
+      <form>
+        <div class="input-group">
+          <input name="date" [matDatepicker]="picker" [(ngModel)]="date" type="text">
+          <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </div>
 
-      <div class="input-group">
-        <input [matDatepicker]="picker" [(ngModel)]="date" type="text">
-        <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </div>
+        <div class="input-group">
+          <input name="title" type="text" placeholder="Todo" [(ngModel)]="newTaskTitle">
+          <button (click)="add()" class="add-button">+</button>
+        </div>
+    </form>
 
-      <div class="input-group">
-        <input type="text" placeholder="Todo" #newTask>
-        <button (click)="add(newTask.value)" class="add-button">+</button>
-      </div>
       <table>
         <tr *ngFor="let task of tasks; let i = index" [class.even]="i%2==0" [class.odd]="i%2!=0">
           <td>

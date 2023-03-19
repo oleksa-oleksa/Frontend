@@ -97,6 +97,10 @@ background-color: rgb(11, 11, 11);
 color: rgb(255, 255, 255);
 }
 
+p {
+    line-height: 50px;
+}
+
 .is-done {
     text-decoration: line-through;
 }
