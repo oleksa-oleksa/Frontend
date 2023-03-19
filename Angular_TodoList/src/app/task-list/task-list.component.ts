@@ -27,7 +27,7 @@ export class TaskListComponent implements OnInit{
   add(){
     //alert(newTask)
     this.tasks.push(new Task(this.newTaskTitle));
-    this.newTaskTitle = "";
+    //this.newTaskTitle = "";
   }
 
   remove(existingTask: Task) {

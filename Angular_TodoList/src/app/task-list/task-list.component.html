@@ -2,7 +2,7 @@
     App Component
   <div class="container">
     <div class="todo-list">
-      <form>
+      <form (ngSubmit)="add(); taskNgForm.reset()" #taskNgForm="ngForm">
         <div class="input-group">
           <input name="date" [matDatepicker]="picker" [(ngModel)]="date" type="text">
           <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
@@ -11,7 +11,7 @@
 
         <div class="input-group">
           <input name="title" type="text" placeholder="Todo" [(ngModel)]="newTaskTitle">
-          <button (click)="add()" class="add-button">+</button>
+          <button class="add-button">+</button>
         </div>
     </form>
 
