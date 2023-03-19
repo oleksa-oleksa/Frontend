@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskListModule } from './task-list/task-list.module';
 import { CalendarModule } from './calendar/calendar.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,7 +16,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     TaskListModule,
     CalendarModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
