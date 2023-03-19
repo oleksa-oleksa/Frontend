@@ -8,10 +8,12 @@ import { ActivatedRoute, Route } from '@angular/router';
 })
 export class TaskListComponent implements OnInit{
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
+
+  date: Date = new Date()
 
   ngOnInit(): void {
-    
+    var date: Date = new Date(this.route.snapshot.params['date']);
   }
 
   tasks: Task[] = [
