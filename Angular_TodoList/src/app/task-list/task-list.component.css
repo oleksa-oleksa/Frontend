@@ -52,6 +52,13 @@ font-size: x-large;
 font-weight: bold;
 /* color: white; */
 }
+
+
+button:disabled {
+    background-color: gray;
+    cursor: default;
+}
+
 button{
 border-style: none;
 cursor: pointer;
