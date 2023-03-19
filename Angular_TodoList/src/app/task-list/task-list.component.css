@@ -104,3 +104,8 @@ p {
 .is-done {
     text-decoration: line-through;
 }
+
+.validation-error {
+    color: rgb(164, 0, 0);
+    margin-bottom: 20px;
+}
