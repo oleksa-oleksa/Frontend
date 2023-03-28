@@ -15,6 +15,8 @@ export class TaskListComponent implements OnInit{
 
   constructor(private route: ActivatedRoute) {}
 
+  taskService = new TaskService();
+  tasks = this.taskService.getAllTasks()
   //newTaskTitle: string = "";
   newTask: NewTask = new NewTask();
   //date: Date = new Date()
@@ -35,9 +37,8 @@ export class TaskListComponent implements OnInit{
       return;
     }
     
-    //this.tasks.push(new TaskItem(this.newTask.title));
     //this.newTaskTitle = "";
-    this.taskService.
+    this.taskService.addTask(this.newTask)
     taskNgForm.reset({date: this.newTask.date})
   }
 
@@ -45,7 +46,7 @@ export class TaskListComponent implements OnInit{
     var userConfirmed = confirm(`Are you sure you want to remove: \n ${existingTask.title}`)
 
     if (userConfirmed) {
-    this.tasks = this.tasks.filter(task => task != existingTask);
+      this.taskService.removeTask(existingTask)
     }
   }
 }

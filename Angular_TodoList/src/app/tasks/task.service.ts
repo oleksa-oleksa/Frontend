@@ -22,11 +22,11 @@ export class TaskService {
   }
 
   addTask(newTask: NewTask) {
-    this.tasks.push(new TaskItem(NewTask.title))
+    this.tasks.push(new TaskItem(newTask.title));
 
   }
 
   removeTask(existingTask: TaskItem) {
-    
+    this.tasks = this.tasks.filter(task => task != existingTask); 
   }
 }
