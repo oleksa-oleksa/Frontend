@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Route } from '@angular/router';
 import { NewTask } from './new-task.dto';
-import { TaskItem } from './task-irem.dto';
+import { TaskItem } from './task-item.dto';
+import { TaskService } from './task.service';
 
 @Component({
   selector: 'app-task-list',
@@ -23,13 +24,6 @@ export class TaskListComponent implements OnInit{
     this.newTask = new NewTask(this.newTask.title, new Date(strDate))
   }
 
-  tasks: TaskItem[] = [
-    new TaskItem("Call Katja"),
-    new TaskItem("Go to the Superfit Gym"),
-    new TaskItem("Visit those awesome playground with a child afterworks"),
-    new TaskItem("Try a new pizza from a small restaurant")
-  ]
-
   add(taskNgForm: NgForm){
     //alert(newTask)
 
@@ -41,8 +35,9 @@ export class TaskListComponent implements OnInit{
       return;
     }
     
-    this.tasks.push(new TaskItem(this.newTask.title));
+    //this.tasks.push(new TaskItem(this.newTask.title));
     //this.newTaskTitle = "";
+    this.taskService.
     taskNgForm.reset({date: this.newTask.date})
   }
 
